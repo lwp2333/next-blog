@@ -17,7 +17,7 @@ model post {
   authorId  Int
   user      user     @relation(fields: [authorId], references: [id])
 
-  @@index([authorId], name: "authorId")
+  @@index([authorId], map: "authorId")
 }
 
 model profile {

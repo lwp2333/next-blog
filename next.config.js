@@ -1,10 +1,8 @@
-const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin')
-
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE ? true : false,
 })
 
 module.exports = withBundleAnalyzer({
-  reactStrictMode: true,
-  plugins: [new AntdDayjsWebpackPlugin()],
+  reactStrictMode: false,
+  plugins: [],
 })

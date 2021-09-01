@@ -1,19 +1,13 @@
-import '../styles/globals.scss'
-import '../styles/theme.scss'
-
-import NProgress from 'nprogress'
-import '../styles/nprogress.scss'
-
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-
+import NProgress from 'nprogress'
+import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
-import { ConfigProvider } from 'antd'
-import zhCN from 'antd/lib/locale/zh_CN'
 
 NProgress.configure({
   showSpinner: false,
 })
+
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useEffect(() => {
@@ -28,10 +22,6 @@ function App({ Component, pageProps }: AppProps) {
     })
   })
 
-  return (
-    <ConfigProvider locale={zhCN}>
-      <Component {...pageProps} />
-    </ConfigProvider>
-  )
+  return <Component {...pageProps} />
 }
 export default App
