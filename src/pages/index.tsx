@@ -30,9 +30,9 @@ const Home: NextPage<Props> = ({ userList }) => {
         <h1 className={styles.title}>
           <a>push代码， webhook自动打包 ！</a>
         </h1>
-        <h1 className={styles.title}>
-          <a>更改version，pm2延迟72s restart！！！</a>
-        </h1>
+        <h2>
+          <a>Node程序、pm2自动部署</a>
+        </h2>
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.js</code>
         </p>
