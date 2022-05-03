@@ -1,50 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-    scroll-behavior: smooth;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 /* Make clicks pass-through */
+
+body {
+  &::after {
+    content: '';
+    background: linear-gradient(120deg, #6236ff 0%, #6236ff 0%, #32c5ff 99%, #32c5ff 100%);
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+}
+
 #nprogress {
   pointer-events: none;
 }
-
 #nprogress {
   .bar {
-    background: linear-gradient(to right, #0396ff, #9708cc, #f6416c);
+    background-image: linear-gradient(135deg, #70f570 10%, #49c628 100%);
     position: fixed;
     z-index: 1031;
     top: 0;
     left: 0;
     width: 100%;
-    height: 1.6px;
+    height: 2px;
   }
-}
-
-#nprogress .peg {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #9708cc, 0 0 5px #f6416c;
-  opacity: 1;
-
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  -ms-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px);
 }

@@ -5,13 +5,5 @@
   "printWidth": 120,
   "arrowParens": "avoid",
   "trailingComma": "es5",
-  "endOfLine": "lf",
-  "overrides": [
-    {
-      "files": ".prettierrc",
-      "options": {
-        "parser": "json"
-      }
-    }
-  ]
+  "endOfLine": "auto"
 }
