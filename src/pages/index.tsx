@@ -1,27 +1,34 @@
-import { NextPage, GetServerSidePropsContext } from 'next'
-import prisma from '@/services/prisma'
-import { user } from 'prisma/prisma-client'
-import Layout from '@/layout'
+import React from 'react'
+import { NextPage } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
-interface Props {
-  userList: user[]
-}
+import welComeSvg from '@/assets/svg/welcome.svg'
+import avatar from '@/assets/image/avatar.png'
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const userList = await prisma.user.findMany()
-  return {
-    props: {
-      userList,
-    },
-  }
-}
-
-const Home: NextPage<Props> = ({ userList }) => {
+const Home: NextPage = () => {
   return (
-    <Layout>
-      <Link href="/about">About</Link>
-    </Layout>
+    <div className="relative flex h-screen items-center justify-center overflow-hidden">
+      <Image src={welComeSvg} layout="fill" className="absolute h-full w-full object-cover" alt="welComeSvg.svg" />
+      <div className="absolute inset-0 bg-black opacity-25"></div>
+      <div className="relative z-10 flex w-full flex-col items-center">
+        <Image
+          unoptimized
+          src={avatar}
+          width={96}
+          height={96}
+          className="cursor-pointer rounded-full hover:animate-spin"
+          alt="avatar.png"
+        />
+        <p className="mt-8 text-3xl font-extrabold text-white lg:text-4xl">五边形的男人</p>
+        <p className="mt-6 text-lg font-extrabold text-white">集中一点 登峰造极</p>
+        <Link href="/404">
+          <a className="mt-10 block animate-bounce rounded-full bg-gray-800 py-3 px-4 text-lg font-bold uppercase text-white hover:bg-gray-900">
+            立即进入
+          </a>
+        </Link>
+      </div>
+    </div>
   )
 }
 

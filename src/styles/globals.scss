@@ -1,18 +1,4 @@
 /* Make clicks pass-through */
-
-body {
-  &::after {
-    content: '';
-    background: linear-gradient(120deg, #6236ff 0%, #6236ff 0%, #32c5ff 99%, #32c5ff 100%);
-    position: fixed;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-  }
-}
-
 #nprogress {
   pointer-events: none;
 }
@@ -24,6 +10,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
   }
 }

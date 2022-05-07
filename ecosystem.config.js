@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'next-prisma-mysql',
+      name: 'next-blog',
       script: 'yarn',
       args: 'start',
       env: {
@@ -15,8 +15,8 @@ module.exports = {
       user: 'root',
       host: ['124.222.243.109'],
       ref: 'origin/master',
-      repo: 'https://github.com/lwp2333/next-prisma-mysql',
-      path: '/www/wwwroot/next-prisma-mysql',
+      repo: 'https://github.com/lwp2333/next-blog',
+      path: '/www/wwwroot/next-blog',
       'post-deploy': 'yarn && yarn build && pm2 restart ecosystem.config.js',
     },
   },
