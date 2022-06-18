@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
 interface Props {
+  tilte?: string
   children?: ReactNode
 }
 
@@ -11,14 +12,18 @@ const Layout: FC<Props> = props => {
   return (
     <div className="h-screen w-screen">
       <Head>
-        <title>lwp‘s life</title>
+        <title>{props.tilte}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {props.children}
+      <main className="h-full w-full pb-48 pt-12">{props.children}</main>
       <Footer />
     </div>
   )
+}
+Layout.defaultProps = {
+  tilte: 'lwp‘s life',
+  children: null,
 }
 
 export default Layout

@@ -17,7 +17,11 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 }
 
 const About: NextPage<Props> = ({ userList }) => {
-  return <Layout>About</Layout>
+  return (
+    <Layout>
+      <div className="flex h-full w-full items-center justify-center">等待开发</div>
+    </Layout>
+  )
 }
 
 export default About

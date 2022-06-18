@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         />
         <p className="mt-8 text-3xl font-extrabold text-white lg:text-4xl">五边形的男人</p>
         <p className="mt-6 text-lg font-extrabold text-white">集中一点 登峰造极</p>
-        <Link replace href="/about">
+        <Link replace href="/home">
           <span className="mt-10 block animate-bounce cursor-pointer rounded-full bg-gray-800 py-3 px-4 text-lg font-bold  text-white hover:bg-gray-900">
             立即进入
           </span>
