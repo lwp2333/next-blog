@@ -16,14 +16,12 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   }
 }
 
-const About: NextPage<Props> = ({ userList }) => {
+const Plog: NextPage<Props> = ({ userList }) => {
   return (
     <Layout>
-      <div className="mx-auto flex min-h-[360px] w-full items-center justify-center text-xl font-medium  text-slate-600 md:min-h-[480px] md:text-3xl">
-        下一代轻量服务端渲染博客站点
-      </div>
+      <div className="flex min-h-[200px] w-full items-center justify-center">生活片段</div>
     </Layout>
   )
 }
 
-export default About
+export default Plog

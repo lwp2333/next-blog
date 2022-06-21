@@ -10,23 +10,25 @@ interface Props {
 
 const Footer: FC<Props> = ({ linkList = [] }) => {
   return (
-    <footer className="fixed left-0 bottom-0 flex h-48  w-screen  items-center justify-center bg-[#303846] px-12">
-      {linkList.map((item, x) => {
-        return (
-          <dl className="w-80" key={x}>
-            <dt className="mb-3 text-base text-slate-300">{item.title}</dt>
-            {item.children.map((link, y) => {
-              return (
-                <dd className="text-sm leading-7 text-slate-100" key={y}>
-                  <a target="blank" href={link.url}>
-                    {link.label}
-                  </a>
-                </dd>
-              )
-            })}
-          </dl>
-        )
-      })}
+    <footer className="fixed left-0  bottom-0  w-full bg-[#303846]">
+      <div className="mx-auto flex h-48 max-w-5xl items-center justify-evenly">
+        {linkList.map((item, x) => {
+          return (
+            <dl className="w-32" key={x}>
+              <dt className="mb-3 text-base text-slate-400">{item.title}</dt>
+              {item.children.map((link, y) => {
+                return (
+                  <dd className="text-sm leading-7 text-slate-200" key={y}>
+                    <a target="blank" href={link.url}>
+                      {link.label}
+                    </a>
+                  </dd>
+                )
+              })}
+            </dl>
+          )
+        })}
+      </div>
     </footer>
   )
 }
