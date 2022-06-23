@@ -18,7 +18,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
 const Docs: NextPage<Props> = ({ userList }) => {
   return (
-    <Layout>
+    <Layout tilte="知识小册">
       <div className="flex min-h-[200px] w-full items-center justify-center">知识小册</div>
     </Layout>
   )

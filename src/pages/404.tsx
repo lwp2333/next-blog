@@ -9,7 +9,6 @@ const NotFoundPage: NextPage = () => {
     <div className="h-screen w-screen">
       <Head>
         <title>404 pgae</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative h-screen overflow-hidden bg-indigo-900">
         <Image src={notFoundSvg} layout="fill" className="absolute h-full w-full object-cover" alt="404.png" />

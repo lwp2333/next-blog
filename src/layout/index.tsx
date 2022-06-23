@@ -17,7 +17,6 @@ const Layout: FC<Props> = props => {
     <div className="h-screen w-screen">
       <Head>
         <title>{tilte}</title>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       {!noHeader && <Header />}
       <main className={`w-full ${noFooter ? '' : 'pb-52'}`}>{children}</main>

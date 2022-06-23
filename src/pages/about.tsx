@@ -18,8 +18,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
 const About: NextPage<Props> = ({ userList }) => {
   return (
-    <Layout>
-      <div className="flex min-h-[200px] w-full items-center justify-center">关于我</div>
+    <Layout tilte="关于更多">
+      <div className="flex min-h-[200px] w-full items-center justify-center">关于更多</div>
     </Layout>
   )
 }
