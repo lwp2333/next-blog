@@ -1,5 +1,4 @@
 import { Head, Html, Main, NextScript } from 'next/document'
-
 export default function Document() {
   return (
     <Html>
@@ -21,6 +20,8 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+      <script defer src="/live2d-widget/L2Dwidget.min.js"></script>
+      <script defer src="/live2d-widget/init.js"></script>
     </Html>
   )
 }
