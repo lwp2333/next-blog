@@ -15,7 +15,7 @@ const Header: FC<Props> = props => {
     <header className="sticky top-0  left-0 z-50 w-full bg-white bg-opacity-80 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full items-center justify-start px-4 sm:px-8 md:max-w-5xl">
         <Link href="/home" replace>
-          <Image className="cursor-pointer" src={logo} width={128} height={43} alt="logo" />
+          <Image className="cursor-pointer" src={logo} width={128} height={29.5} alt="logo" />
         </Link>
         {/* pc */}
         <div className="ml-0 hidden md:ml-20 md:block">
