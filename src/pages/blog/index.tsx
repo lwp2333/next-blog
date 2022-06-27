@@ -18,7 +18,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 
 const Vlog: NextPage<Props> = ({ userList }) => {
   return (
-    <Layout tilte='代码世界'>
+    <Layout tilte="代码世界">
       <div className="flex min-h-[200px] w-full items-center justify-center">代码世界</div>
     </Layout>
   )
