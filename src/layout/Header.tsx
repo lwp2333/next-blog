@@ -1,6 +1,5 @@
 import { FC, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import ActiveLink from '@/components/ActiveLink'
 import logo from '@/assets/image/logo.png'
 interface Props {}
@@ -14,22 +13,22 @@ const Header: FC<Props> = props => {
   return (
     <header className="sticky top-0  left-0 z-50 w-full bg-white bg-opacity-80 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full items-center justify-start px-4 sm:px-8 md:max-w-5xl">
-        <Link href="/home" replace>
+        <ActiveLink href="/home" replace>
           <Image className="cursor-pointer" src={logo} width={128} height={29.5} alt="logo" />
-        </Link>
+        </ActiveLink>
         {/* pc */}
         <div className="ml-0 hidden md:ml-20 md:block">
           <div className="ml-10 flex items-baseline space-x-12">
-            <ActiveLink href="/blog" replace className="px-3 py-2">
+            <ActiveLink href="/blog" className="px-3 py-2">
               代码世界
             </ActiveLink>
-            <ActiveLink href="/docs" replace className="px-3 py-2 ">
+            <ActiveLink href="/docs" className="px-3 py-2 ">
               知识小册
             </ActiveLink>
-            <ActiveLink href="/plog" replace className="px-3 py-2">
+            <ActiveLink href="/plog" className="px-3 py-2">
               生活片段
             </ActiveLink>
-            <ActiveLink href="/about" replace className="px-3 py-2">
+            <ActiveLink href="/about" className="px-3 py-2">
               关于更多
             </ActiveLink>
           </div>
