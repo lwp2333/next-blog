@@ -1,4 +1,6 @@
-function init() {
+function init(enable = false) {
+  if (!enable) return
+
   const isMobile = document.body.clientWidth < 768
   window.L2Dwidget.on('*', name => {
     console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
@@ -30,4 +32,4 @@ function init() {
   })
 }
 
-setTimeout(init, 120)
+setTimeout(() => init(true), 120)

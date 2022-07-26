@@ -34,3 +34,18 @@ model user {
   post    post[]
   profile profile?
 }
+
+model config {
+  id       Int  @id @default(autoincrement())
+  key_name Json
+  value    Json
+}
+
+model life_fragment {
+  id      Int    @id @default(autoincrement())
+  title   String @db.VarChar(255)
+  content String @db.VarChar(255)
+  images  Json
+  videos  Json
+  tags    Json
+}

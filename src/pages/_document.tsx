@@ -17,10 +17,6 @@ export default function Document() {
         <meta name="apple-mobile-web-app-title" content="next-blog" />
         <meta name="application-name" content="next-blog" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
-        />
       </Head>
       <body>
         <Main />

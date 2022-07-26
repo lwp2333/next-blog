@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { FC, ReactNode, useMemo } from 'react'
 
@@ -9,7 +10,7 @@ interface Props {
   activeColor?: string
 }
 
-const ActiveLink: FC<Props> = ({ children, href, replace = false, className, activeColor = '#4f46e5' }) => {
+const ActiveLink: FC<Props> = ({ children, href, replace = false, className, activeColor = '#006eff' }) => {
   const router = useRouter()
   const handleClick = (e: any) => {
     e.preventDefault()
@@ -18,12 +19,12 @@ const ActiveLink: FC<Props> = ({ children, href, replace = false, className, act
 
   const styleFill = useMemo(() => {
     return {
-      color: router.asPath === href ? activeColor : 'rgba(0, 0, 0, 0.64)',
+      color: router.asPath === href ? activeColor : 'rgba(0, 0, 0, 0.72)',
     }
   }, [activeColor, href, router.asPath])
 
   return (
-    <a href={href} onClick={handleClick} className={className} style={styleFill}>
+    <a href={href} onClick={handleClick} className={classNames(className)} style={styleFill}>
       {children}
     </a>
   )
